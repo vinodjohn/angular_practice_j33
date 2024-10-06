@@ -1,16 +1,14 @@
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-      <app-student-dashboard></app-student-dashboard>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
+  <span class="example-spacer"></span>
+  <button  class="example-icon favorite-icon" mat-button [routerLink]="['/']">
+    Home
+  </button>
 
-    </div>
-  </div>
-</main>
+  <button  class="example-icon favorite-icon" mat-button [routerLink]="['/create-student']">
+    Create Student
+  </button>
+</mat-toolbar>
 
 
 <router-outlet />

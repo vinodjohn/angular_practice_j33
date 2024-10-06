@@ -7,6 +7,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {StudentModule} from './student/student.module';
 import {HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptors} from '@angular/common/http';
 import {appInterceptor} from './shared/interceptor/app.interceptor';
+import {MatToolbar} from '@angular/material/toolbar';
+import {MatButton} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import {appInterceptor} from './shared/interceptor/app.interceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StudentModule
+    StudentModule,
+    MatToolbar,
+    MatButton
   ],
   providers: [
     provideAnimationsAsync(),
